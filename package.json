@@ -1,0 +1,28 @@
+{
+  "name": "cloud-foundry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node server.es6",
+    "postinstall": "npm run build",
+    "build": "browserify -t babelify --extension=.js --extension=-.es6 --extension=.jsx src/index.js -o public/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshq00/cloud-foundry.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshq00/cloud-foundry/issues"
+  },
+  "homepage": "https://github.com/joshq00/cloud-foundry#readme",
+  "dependencies": {
+    "babel": "^5.4.7",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.3",
+    "express": "^4.12.4",
+    "react": "^0.13.3"
+  }
+}
